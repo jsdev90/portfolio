@@ -66,7 +66,7 @@ const Resume = () => {
             className="vertical-timeline-element--work"
             contentStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             contentArrowStyle={{ borderRight: "7px solid  rgb(33, 150, 243)" }}
-            date="2011 - present"
+            date="Mar 2021 - June 2021"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={reactIcon} alt="react" />
@@ -83,7 +83,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2010 - 2011"
+            date="Mar 2021 - May 2021"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={webflowIcon} alt="webflow" />
@@ -99,7 +99,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2008 - 2010"
+            date="Feb 2021 - May 2021"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={reactIcon} alt="react" />
@@ -113,7 +113,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--work"
-            date="2006 - 2008"
+            date="Oct 2020 - Jan 2021"
             iconStyle={{ background: "rgb(33, 150, 243)", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={reactIcon} alt="react" />
@@ -127,7 +127,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="April 2013"
+            date="Feb 2020 - Aug 2020"
             iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={reactIcon} alt="react" />
@@ -144,7 +144,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="November 2012"
+            date="Jan 2018 - Jan 2020"
             iconStyle={{ background: "#3949ab", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={angularToReact} alt="angular_to_react" />
@@ -160,7 +160,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="2002 - 2006"
+            date="June 2016 - Nov 2017"
             iconStyle={{ background: "rgb(233, 30, 99)", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={vue} alt="vue" />
@@ -176,7 +176,7 @@ const Resume = () => {
           </VerticalTimelineElement>
           <VerticalTimelineElement
             className="vertical-timeline-element--education"
-            date="November 2012"
+            date="Feb 2014 - May 2016"
             iconStyle={{ background: "#3949ab", color: "#fff" }}
             icon={
               <Avatar className={classes.avatar} src={web} alt="web" />
