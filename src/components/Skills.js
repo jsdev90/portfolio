@@ -2,7 +2,12 @@ import React from "react";
 import { makeStyles } from "@material-ui/core/styles";
 import Typography from "@material-ui/core/Typography";
 import Box from "@material-ui/core/Box";
-import SkillBar from 'react-skillbars';
+import CircleChart from "./CircleChart";
+import Grid from "@material-ui/core/Grid";
+import Card from "@material-ui/core/Card";
+import Zoom from 'react-reveal/Zoom';
+
+import { skills } from '../constants';
 
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
@@ -13,36 +18,19 @@ const useStyles = makeStyles((theme) => ({
   heading: {
     color: "#e0e0e0",
     paddingBottom: theme.spacing(2)
-  }
+  },
+  cardContainer: {
+    maxWidth: 180,
+    margin: "1.5rem auto",
+    borderRadius: 10,
+    padding: '1rem',
+    textAlign: 'center',
+    "&:hover": {
+      transform: "scale(1.05)",
+      transition: "all .5s ease-in-out"
+    },
+  },
 }));
-
-const skills = [
-  {type: "JavaScript", level: 98},
-  {type: "React.js", level: 95},
-  {type: "ReactNative", level: 95},
-  {type: "Redux", level: 95},
-  {type: "Angular", level: 85},
-  {type: "Vue.js", level: 90},
-  {type: "ES6", level: 95},
-  {type: "TypeScript", level: 95},
-  {type: "GraphQL", level: 90},
-  {type: "Node.js", level: 80},
-  {type: "MongoDB", level: 80},
-  {type: "HTML/HTML5", level: 98},
-  {type: "CSS/CSS3", level: 98},
-  {type: "Firebase", level: 85},
-  {type: "AWS", level: 80},
-  {type: "Webflow", level: 78},
-  {type: "WordPress", level: 65},
-];
-
-const colors = {
-  bar: '#009688',
-  title: {
-    text: '#004d40',
-    background: '#e0f2f1'
-  }
-}
 
 const Skills = () => {
   const classes = useStyles();
@@ -52,7 +40,22 @@ const Skills = () => {
         Skills
       </Typography>
       <Box component="div">
-        <SkillBar skills={skills} colors={colors} height={25} />
+        <Grid container justify="center">
+          {skills.map((skill, i) => {
+            return (
+              <Grid item xs={12} sm={4} md={2} key={i}>
+                <Zoom bottom duration={i * 300}>
+                  <Card className={classes.cardContainer}>
+                      <Typography variant="h5" gutterBottom>
+                        {skill.type}
+                      </Typography>
+                      <CircleChart percent={skill.level} />
+                  </Card>
+                </Zoom>
+              </Grid>
+            )
+          })}
+        </Grid>
       </Box>
     </Box>
   );

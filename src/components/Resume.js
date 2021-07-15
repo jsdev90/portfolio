@@ -35,7 +35,7 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     "&:hover": {
       transform: "scale(1.05)",
-      transition: "scale 1s"
+      transition: "all .5s ease-in-out"
     },
   },
   heading: {
