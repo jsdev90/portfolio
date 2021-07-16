@@ -52,6 +52,7 @@ const useStyles = makeStyles((theme) => ({
   },
   center: {
     margin: "0.5rem auto",
+    marginTop: "3rem"
   },
   listItem: {
     color: "#bdbdbd",
