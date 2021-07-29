@@ -59,7 +59,8 @@ export const projects = [
   {
     name: "Assured Insurance",
     description: `- Built a Webflow website using Webflow CMS, Webflow UIKit, JavaScript, jQuery, HTML, CSS, etc.
-    - Implemented responsive UI based on pixel-perfect Figma design
+    - Implemented mobile-friendly and pixel-perfect UI based on the Figma designs
+    - Implemented UI animations
     - Integrated Third-Party systems
     `,
     image: project3,

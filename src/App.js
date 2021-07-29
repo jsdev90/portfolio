@@ -16,10 +16,10 @@ function App() {
       <CssBaseline />
       <Navbar />
       <Switch>
-        <Route exact path="/" component={Home} />
+        <Route exact path="/portfolio" component={Home} />
         <Route exact path="/skills" component={Skills} />
         <Route exact path="/resume" component={Resume} />
-        <Route exact path="/portfolio" component={Portfolio} />
+        <Route exact path="/projects" component={Portfolio} />
         <Route exact path="/contact" component={Contact} />
       </Switch>
     </React.Fragment>

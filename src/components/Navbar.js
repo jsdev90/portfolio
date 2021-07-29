@@ -60,10 +60,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const menuItems = [
-  { listIcon: <Home />, listText: "Home", listPath: "/" },
+  { listIcon: <Home />, listText: "Home", listPath: "/portfolio" },
   { listIcon: <VerifiedUser />, listText: "Skills", listPath: "/skills" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
+  { listIcon: <Apps />, listText: "Portfolio", listPath: "/projects" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 ];
 
@@ -101,7 +101,7 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar position="static" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
-            <Avatar className={classes.avatar} src={jex} alt="Johann Villalvir" component={Link} to={"/"} />
+            <Avatar className={classes.avatar} src={jex} alt="Johann Villalvir" component={Link} to={"/portfolio"} />
             <IconButton onClick={() => setOpen(true)}>
               <Menu className={classes.menu} />
             </IconButton>
