@@ -28,7 +28,7 @@ export const skills = [
   {type: "jQuery", level: 90},
   {type: "HTML/HTML5", level: 95},
   {type: "CSS/CSS3", level: 95},
-  {type: "Webflow", level: 75},
+  {type: "Webflow", level: 92},
   {type: "WordPress", level: 68},
   {type: "PHP", level: 65},
   {type: "MySQL", level: 75},
