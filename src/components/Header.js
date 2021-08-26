@@ -50,7 +50,9 @@ const Header = () => {
         <Typed
           strings={[
             "Senior Frontend Developer",
-            "Software Engineer",
+            "Senior Software Engineer",
+            "Full-Stack JavaScript Engineer",
+            "Webflow Expert",
             "Assistant Instructor",
           ]}
           typeSpeed={40}
