@@ -87,3 +87,18 @@ body {
   -webkit-box-orient: vertical;
   overflow: hidden;
 }
+
+@media (max-width: 375px) {
+  .userAvatar img {
+    width: 150px;
+    height: 150px;
+    border-radius: 100%;
+  }
+  .userName {
+    font-size: 2.5rem !important;
+  }
+  .subTitle span {
+    font-size: 1.2rem;
+  }
+}
+

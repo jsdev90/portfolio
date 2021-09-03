@@ -11,8 +11,8 @@ import avatar from "../avatar.png";
 
 const useStyles = makeStyles((theme) => ({
   avatar: {
-    width: 300,
-    height: 300,
+    width: 250,
+    height: 250,
     margin: theme.spacing(1),
   },
   title: {
@@ -39,14 +39,14 @@ const Header = () => {
   return (
     <Box className={classes.typedContainer}>
       <Grid container justify="center">
-        <Avatar className={classes.avatar} src={avatar} alt="Johann Villalvir" />
+        <Avatar className={[classes.avatar, "userAvatar"]} src={avatar} alt="Johann Villalvir" />
       </Grid>
-      <Typography className={classes.title} variant="h2">
+      <Typography className={[classes.title, "userName"]} variant="h2">
         <Zoom top cascade duration={2000}>
           Johann Villalvir
         </Zoom>
       </Typography>
-      <Typography className={classes.subtitle} variant="h4">
+      <Typography className={[classes.subtitle, "subTitle"]} variant="h4">
         <Typed
           strings={[
             "Senior Frontend Developer",
