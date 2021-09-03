@@ -43,7 +43,7 @@ const Skills = () => {
         <Grid container justify="center">
           {skills.map((skill, i) => {
             return (
-              <Grid item xs={12} sm={4} md={2} key={i}>
+              <Grid item xs={12} sm={4} md={2} key={i} className="gridItem">
                 <Zoom bottom duration={i * 300}>
                   <Card className={classes.cardContainer}>
                       <Typography variant="h5" gutterBottom>
