@@ -79,7 +79,7 @@ const Portfolio = () => {
     <Box component="div" className={classes.mainContainer}>
       <Grid container justify="center">
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={8} md={3} key={i}>
+          <Grid item xs={12} sm={6} md={3} key={i} className="gridItem">
             <Zoom duration={i * 300}>
               <Card className={classes.cardContainer} onClick={() => handleOpenModal(i)}>
                 <CardActionArea>

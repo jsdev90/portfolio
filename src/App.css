@@ -88,6 +88,10 @@ body {
   overflow: hidden;
 }
 
+.gridItem {
+  padding: 0.5rem;
+}
+
 @media (max-width: 375px) {
   .userAvatar img {
     width: 150px;
