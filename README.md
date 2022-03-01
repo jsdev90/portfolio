@@ -1,4 +1,4 @@
-## Johann's Portfolio
+## My Portfolio
 
 A portfolio single page application using React and Material UI
 
