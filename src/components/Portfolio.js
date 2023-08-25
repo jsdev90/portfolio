@@ -8,7 +8,6 @@ import CardActions from "@material-ui/core/CardActions";
 import CardContent from "@material-ui/core/CardContent";
 import CardMedia from "@material-ui/core/CardMedia";
 import Typography from "@material-ui/core/Typography";
-import Zoom from 'react-reveal/Zoom';
 import LinkIcon from '@material-ui/icons/Link';
 import Modal from '@material-ui/core/Modal';
 import CloseRounded from '@material-ui/icons/CloseRounded';
@@ -19,12 +18,23 @@ import { projects } from '../constants'
 const useStyles = makeStyles((theme) => ({
   mainContainer: {
     height: "100%",
-    background: "#424242",
-    paddingTop: theme.spacing(10)
+    padding: theme.spacing(8),
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(2),
+      paddingTop: theme.spacing(4),
+    }
+  },
+  heading: {
+    color: "#e0e0e0",
+    paddingBottom: theme.spacing(2)
+  },
+  gridItem: {
+    padding: theme.spacing(2),
+    [theme.breakpoints.down('xs')]: {
+      padding: theme.spacing(1.5),
+    }
   },
   cardContainer: {
-    maxWidth: 345,
-    margin: "3rem auto",
     "&:hover": {
       transform: "scale(1.05)",
       transition: "all .5s ease-in-out"
@@ -77,34 +87,37 @@ const Portfolio = () => {
 
   return (
     <Box component="div" className={classes.mainContainer}>
-      <Grid container justify="center">
+      <Typography variant="h4" align="center" className={classes.heading}>
+        Portfolio
+      </Typography>
+      <Grid container>
         {projects.map((project, i) => (
-          <Grid item xs={12} sm={6} md={3} key={i} className="gridItem">
-            <Zoom duration={i * 300}>
-              <Card className={classes.cardContainer} onClick={() => handleOpenModal(i)}>
-                <CardActionArea>
-                  <CardMedia
-                    component="img"
-                    alt={project.name}
-                    height="140"
-                    image={project.image}
-                  />
-                  <CardContent>
-                    <Typography variant="h5" gutterBottom>
-                      {project.name}
-                    </Typography>
-                    <Typography variant="body2" color="textSecondary" className="description">
-                      {project.description}
-                    </Typography>
-                  </CardContent>
-                </CardActionArea>
-                <CardActions>
-                  <a href={project.link} target="_blank" rel="noopener noreferrer">
-                    <LinkIcon className={classes.link} />
-                  </a>
-                </CardActions>
-              </Card>
-            </Zoom>
+          <Grid item xs={12} sm={6} md={3} key={i} className={classes.gridItem}>
+            {/* <Zoom duration={i * 300}> */}
+            <Card className={classes.cardContainer} onClick={() => handleOpenModal(i)}>
+              <CardActionArea>
+                <CardMedia
+                  component="img"
+                  alt={project.name}
+                  height="140"
+                  image={project.image}
+                />
+                <CardContent>
+                  <Typography variant="h5" gutterBottom>
+                    {project.name}
+                  </Typography>
+                  <Typography variant="body2" color="textSecondary" className="description">
+                    {project.description}
+                  </Typography>
+                </CardContent>
+              </CardActionArea>
+              <CardActions>
+                <a href={project.link} target="_blank" rel="noopener noreferrer">
+                  <LinkIcon className={classes.link} />
+                </a>
+              </CardActions>
+            </Card>
+            {/* </Zoom> */}
           </Grid>
         ))}
       </Grid>
@@ -114,7 +127,7 @@ const Portfolio = () => {
         aria-labelledby="simple-modal-title"
         aria-describedby="simple-modal-description"
       >
-        {activeId > -1 && <Zoom onClick={handleCloseModal}>
+        {activeId > -1 && 
           <Box component="div" className={classes.paper}>
             <IconButton onClick={handleCloseModal} className={classes.closeButton}>
               <CloseRounded />
@@ -130,7 +143,7 @@ const Portfolio = () => {
               {projects[activeId].description}
             </Typography>
           </Box>
-        </Zoom>}
+        }
       </Modal>
     </Box>
   );

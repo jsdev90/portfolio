@@ -57,6 +57,20 @@ const useStyles = makeStyles((theme) => ({
   listItem: {
     color: "#bdbdbd",
   },
+  links: {
+    display: "flex",
+    alignItems: "center",
+    columnGap: "0.3rem",
+  },
+  link: {
+    textDecoration: 'none',
+    color: '#fff',
+    padding: '0 .5rem',
+    fontSize: '1rem',
+    '&:hover': {
+      color: '#fafafa'
+    }
+  }
 }));
 
 const menuItems = [
@@ -102,6 +116,15 @@ const Navbar = () => {
         <AppBar position="static" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
             <Avatar className={classes.avatar} src={jex} alt="Johann Villalvir" component={Link} to={"/portfolio"} />
+            {/* <Box className={classes.links}>
+              {links.map((link, idx) => {
+                return (
+                  <Link to={link.listPath} underline="none" key={`header-link-${idx}`} className={classes.link}>
+                    {link.listText}
+                  </Link>
+                )
+              })}
+            </Box> */}
             <IconButton onClick={() => setOpen(true)}>
               <Menu className={classes.menu} />
             </IconButton>

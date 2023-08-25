@@ -13,26 +13,129 @@ import project10 from "./images/campusoptics.png";
 import project11 from "./images/rolfsonoil.png";
 import project12 from "./images/worklete.png";
 
+import reactIcon from "./images/react.png";
+import webflowIcon from "./images/webflow.png";
+import angularToReact from "./images/xangular_react_icon.png";
+import vue from "./images/vue.jpeg";
+import web from "./images/web.png"
+
 export const skills = [
-  {type: "JavaScript", level: 95},
-  {type: "Frontend Dev", level: 95},
-  {type: "React.js", level: 92},
-  {type: "React Native", level: 90},
-  {type: "Redux", level: 90},
-  {type: "Angular", level: 82},
-  {type: "Vue.js", level: 85},
-  {type: "ES6", level: 90},
-  {type: "TypeScript", level: 90},
-  {type: "GraphQL", level: 85},
-  {type: "Node.js", level: 80},
-  {type: "jQuery", level: 90},
-  {type: "HTML/HTML5", level: 95},
-  {type: "CSS/CSS3", level: 95},
+  {type: "JavaScript", level: 98},
+  {type: "TypeScript", level: 98},
+  {type: "React.js", level: 98},
+  {type: "React Native", level: 95},
+  {type: "Redux", level: 98},
+  {type: "Next.js", level: 95},
+  {type: "Frontend Dev", level: 96},
+  {type: "Backend Dev", level: 92},
+  {type: "Angular", level: 88},
+  {type: "Vue.js", level: 88},
+  {type: "ES6+", level: 98},
+  {type: "Tailwind CSS", level: 95},
+  {type: "GraphQL", level: 95},
+  {type: "AWS", level: 85},
+  {type: "Node.js", level: 85},
+  {type: "jQuery", level: 98},
+  {type: "HTML/HTML5", level: 98},
+  {type: "CSS/CSS3", level: 98},
+  {type: "Bootstrap", level: 98},
   {type: "Webflow", level: 92},
-  {type: "WordPress", level: 68},
-  {type: "PHP", level: 65},
+  {type: "MongoDB", level: 92},
+  {type: "WordPress", level: 78},
+  {type: "PHP", level: 75},
   {type: "MySQL", level: 75},
 ];
+
+export const works = [
+  {
+    title: 'Senior Frontend Developer',
+    subTitle: 'Laurel Road',
+    date: 'Feb  2022 - Jan 2023',
+    content: 'React, Reflux to Redux, Best practices, API integrations, Pixel-perfect & responsive UI',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'Frontend Developer',
+    subTitle: 'Intellimize',
+    date: 'Nov  2021 - Feb 2022',
+    content: 'React, Redux, Redux-Saga, TypeScript, Jest, Unit Testing, D3.js, Lodash, Custom Hook',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'React FullStack Developer',
+    subTitle: 'OmniScience',
+    date: 'July  2021 -Nov 2021',
+    content: 'React, GraphQL, Apollo, Material-UI, AWS, DynamoDB, AppSync, Cognito, S3, etc',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'Senior Frontend Developer',
+    subTitle: 'CivImpact Labs',
+    date: 'Mar 2021 - June 2021',
+    content: 'React, Redux, TypeScript, Frontend Development, Pixel-Perfect & Responsive UI, API Integration, Video/Audio Conference, Redux-Thunk, Axios, OpenTok',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'Webflow Expert',
+    subTitle: 'Assured Insurance Technologies, Inc',
+    date: 'Mar 2021 - May 2021',
+    content: 'Webflow, CMS, Greenhouse, Portfolio, Pixel-Perfect & Responsive UI, Animation',
+    icon: webflowIcon,
+    alt: 'webflow',
+  },
+  {
+    title: 'Senior Frontend React Developer',
+    subTitle: 'Modzy, Inc',
+    date: 'Feb 2021 - May 2021',
+    content: 'React.js, GraphQL, Apollo, D3.js, Frontend Development, Data visualization, PropTypes',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'Senior React Developer',
+    subTitle: 'Etison, LLC',
+    date: 'Oct 2020 - Jan 2021',
+    content: 'React.js, React Context, REST API, Ruby on Rails',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'Front-end Developer for a SaaS Real Estate Product (React/React Native)',
+    subTitle: 'ArcheTape, Inc',
+    date: 'Feb 2020 - Aug 2020',
+    content: 'React, React Native, Web Application, Marketing Website, Mobile Application, Styled-Components, Mapbox, Stripe, Messaging, Firebase, Redux, Redux-Thunk, Axios',
+    icon: reactIcon,
+    alt: 'react',
+  },
+  {
+    title: 'Senior Frontend Engineer',
+    subTitle: 'LoungeBuddy, Inc',
+    date: 'Jan 2018 - Jan 2020',
+    content: 'React, Angular, Redux, Redux-Saga, Axios, ZenDesk, Marketo Form, React Native, Frontend Development',
+    icon: angularToReact,
+    alt: 'angular_to_react',
+  },
+  {
+    title: 'Full Stack Developer',
+    subTitle: 'Pleroma Social',
+    date: 'June 2016 - Nov 2017',
+    content: 'Vue.js, Vuex, Vuetify, Analytics, Node.js, MongoDB, AWS',
+    icon: vue,
+    alt: 'vue',
+  },
+  {
+    title: 'Full Stack Developer',
+    subTitle: 'Freelancer',
+    date: 'Feb 2014 - May 2016',
+    content: 'React, Vue, Angular, Node, React Native, HTML5, CSS3, Bootstrap, Material-UI, Frontend Development, Backend Development',
+    icon: web,
+    alt: 'web',
+  },
+]
 
 export const projects = [
   {

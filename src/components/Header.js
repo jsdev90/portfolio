@@ -3,8 +3,7 @@ import Typography from "@material-ui/core/Typography";
 import Avatar from "@material-ui/core/Avatar";
 import Grid from "@material-ui/core/Grid";
 import Box from "@material-ui/core/Box";
-import Typed from "react-typed";
-import Zoom from 'react-reveal/Zoom';
+import Typewriter from 'typewriter-effect';
 
 import { makeStyles } from "@material-ui/core/styles";
 import avatar from "../avatar.png";
@@ -20,7 +19,6 @@ const useStyles = makeStyles((theme) => ({
   },
   subtitle: {
     color: "#e0e0e0",
-    textTransform: "uppercase",
   },
   typedContainer: {
     position: "absolute",
@@ -42,22 +40,24 @@ const Header = () => {
         <Avatar className={[classes.avatar, "userAvatar"]} src={avatar} alt="Johann Villalvir" />
       </Grid>
       <Typography className={[classes.title, "userName"]} variant="h2">
-        <Zoom top cascade duration={2000}>
-          Johann Villalvir
-        </Zoom>
+        Johann Villalvir
       </Typography>
       <Typography className={[classes.subtitle, "subTitle"]} variant="h4">
-        <Typed
-          strings={[
-            "Senior Frontend Developer",
-            "Senior Software Engineer",
-            "Full-Stack JavaScript Engineer",
-            "Webflow Expert",
-            "Assistant Instructor",
-          ]}
-          typeSpeed={40}
-          backSpeed={50}
-          loop
+        <Typewriter
+          options={{
+            strings: [
+              "Senior Frontend Developer",
+              "Senior Software Engineer",
+              "Full-Stack JavaScript Engineer",
+              "Webflow Expert",
+              "Assistant Instructor",
+            ],
+            loop: true,
+            autoStart: true,
+            pauseFor: 1500,
+            delay: 40,
+            cursor: ''
+          }}
         />
       </Typography>
     </Box>

@@ -1,37 +1,48 @@
-import React, { useEffect, useState } from "react";
-import { makeStyles, withStyles } from "@material-ui/core/styles";
-import Box from "@material-ui/core/Box";
-import TextField from "@material-ui/core/TextField";
-import Typography from "@material-ui/core/Typography";
-import Grid from "@material-ui/core/Grid";
-import Button from "@material-ui/core/Button";
-import Flip from 'react-reveal/Flip';
-import Send from "@material-ui/icons/Send";
-import emailjs, { init } from 'emailjs-com';
-import Snackbar from '@material-ui/core/Snackbar';
-import MuiAlert from '@material-ui/lab/Alert';
-
-function Alert(props) {
-  return <MuiAlert elevation={6} variant="filled" {...props} />;
-}
+import { useRef, useState, useEffect } from "react";
+import { sendForm } from "@emailjs/browser";
+import { toast, ToastContainer } from "react-toastify";
+import "react-toastify/dist/ReactToastify.css";
+import {
+  Box,
+  Button,
+  TextField,
+  Typography,
+  makeStyles,
+  withStyles,
+} from "@material-ui/core";
+import { Send } from "@material-ui/icons";
 
 const useStyles = makeStyles((theme) => ({
   contactContainer: {
     background: "#111111",
-    height: "100vh",
-    padding: theme.spacing(4)
+    height: "calc(100vh - 80px)",
+    padding: theme.spacing(4),
+    [theme.breakpoints.down("md")]: {
+      paddingTop: theme.spacing(4),
+      padding: theme.spacing(2),
+    },
+  },
+  wrapper: {
+    maxWidth: 640,
+    margin: "0 auto",
+    padding: theme.spacing(2),
+    [theme.breakpoints.down("md")]: {
+      padding: theme.spacing(1),
+    },
   },
   heading: {
     color: "#e0e0e0",
     textAlign: "center",
     textTransform: "uppercase",
-    marginBottom: "1rem",
+    marginBottom: "1.5rem",
+  },
+  subHeading: {
+    color: "#e0e0e0",
+    paddingBottom: "1rem",
+    textAlign: "center",
   },
   form: {
-    top: "50%",
-    left: "50%",
-    transform: "translate(-50%, -50%)",
-    position: "absolute",
+    marginTop: theme.spacing(2),
   },
   input: {
     color: "#fff",
@@ -40,6 +51,10 @@ const useStyles = makeStyles((theme) => ({
     marginTop: "1rem",
     color: "#e0e0e0",
     borderColor: "#e0e0e0",
+    padding: theme.spacing(1),
+    "&:disabled": {
+      borderColor: "#e0e0e0",
+    },
   },
   field: {
     margin: "1rem 0rem",
@@ -48,6 +63,7 @@ const useStyles = makeStyles((theme) => ({
 
 const InputField = withStyles({
   root: {
+    marginBottom: "1rem",
     "& label.Mui-focused": {
       color: "#e0e0e0",
     },
@@ -59,7 +75,8 @@ const InputField = withStyles({
         borderColor: "#e0e0e0",
       },
       "&:hover fieldset": {
-        borderColor: "#e0e0e0",
+        // borderColor: "#e0e0e0",
+        borderWidth: 2,
       },
       "&.Mui-focused fieldset": {
         color: "#fff",
@@ -70,84 +87,165 @@ const InputField = withStyles({
 })(TextField);
 
 const Contact = () => {
-  const [open, setOpen] = useState(false);
+  const form = useRef();
   const classes = useStyles();
-  
+  const firstRender = useRef(true);
+  const [field, setField] = useState({
+    message: "",
+    name: "",
+    email: "",
+  });
+
+  const handleChange = (e, field) => {
+    setField((current) => ({
+      ...current,
+      [field]: e.target.value,
+    }));
+  };
+
+  const validateEmail = (mail) => {
+    if (/^\w+([\.-]?\w+)*@\w+([\.-]?\w+)*(\.\w{2,3})+$/.test(mail)) {
+      return true;
+    }
+    return false;
+  };
+
   useEffect(() => {
-    init("user_O5HFMB4vdt5pPNPhH3aqS");
-  }, []);
+    if (firstRender.current) {
+      firstRender.current = false;
+    }
+  }, [field.email, field.message, field.name]);
+
+  const isEnabled =
+    field.message && field.name && field.email && validateEmail(field.email);
 
   const sendEmail = (e) => {
     e.preventDefault();
-    console.log(e.target);
-    emailjs.sendForm('service_7w5xua4', 'template_5djxh6u', e.target, 'user_O5HFMB4vdt5pPNPhH3aqS')
-    .then((result) => {
-        if (result.status === 200) {
-          setOpen(true)
-          // const frm = document.getElementsByTagName('form')[0];
-          // frm.submit(); // Submit the form
-          // frm.reset();  // Reset all form data
-          // return false; // Prevent page refresh
+    if (isEnabled) {
+      sendForm(
+        "service_8buo5sp",
+        "template_wp5f308",
+        form.current,
+        "user_O5HFMB4vdt5pPNPhH3aqS"
+      ).then(
+        (result) => {
+          toast.success(
+            "Thank you for getting in touch! I appreciate you contacting us! I will get back in touch with you soon! Have a great day!",
+            {
+              progress: undefined,
+            }
+          );
+        },
+        (error) => {
+          toast.error(
+            "Sorry, could you please reach out to johann.dev94@gmail.com?",
+            {
+              progress: undefined,
+            }
+          );
         }
-    }, (error) => {
-        console.log(error.text);
-    });
-  }
+      );
+    } else {
+      firstRender.current = false;
+    }
+  };
 
   return (
     <Box component="div" className={classes.contactContainer}>
-      <Flip left>
-        <Grid container justify="center">
-          <Box component="form" className={classes.form} onSubmit={sendEmail}>
-            <Typography variant="h5" className={classes.heading}>
-              Hire or Contact me...
-            </Typography>
-            <InputField
-              fullWidth={true}
-              label="Name"
-              variant="outlined"
-              inputProps={{ className: classes.input }}
-              name="user_name"
-            />
-            <InputField
-              fullWidth={true}
-              label="Email"
-              variant="outlined"
-              inputProps={{ className: classes.input }}
-              className={classes.field}
-              type="email"
-              name="user_email"
-            />
-            <InputField
-              fullWidth={true}
-              label="Message"
-              variant="outlined"
-              multiline
-              rows={4}
-              inputProps={{ className: classes.input }}
-              name="message"
-            />
-            <Button
-              variant="outlined"
-              fullWidth={true}
-              endIcon={<Send />}
-              className={classes.button}
-              type="submit"
-            >
-              Contact Me
-            </Button>
-          </Box>
-        </Grid>
-      </Flip>
-      <Snackbar
-        anchorOrigin={{ vertical: 'top', horizontal: 'right' }}
-        open={open}
-        onClose={() => setOpen(false)}
-        autoHideDuration={6000}
-        key={"top-right"}
-      >
-        <Alert severity="success">Thanks for contacting me!</Alert>
-      </Snackbar>
+      <Box component="div" className={classes.wrapper}>
+        <Typography variant="h5" className={classes.heading}>
+          Contact Me
+        </Typography>
+        <Typography variant="subtitle1" className={classes.subHeading}>
+          Every amazing partnership begins with a dialogue, and I believe the
+          starting point for something extraordinary is a click away. Please
+          fill out the form below and I'll be in touch to continue the
+          conversation, and see where that takes me - to new products, or new
+          visions, or new ways of using technology for shared benefit.
+        </Typography>
+        <Typography variant="h6" className={classes.subHeading}>
+          Let's make something great!
+        </Typography>
+        <Box
+          component="form"
+          className={classes.form}
+          onSubmit={sendEmail}
+          ref={form}
+        >
+          <InputField
+            fullWidth={true}
+            label="Please tell me how I can help you"
+            variant="outlined"
+            inputProps={{ className: classes.input }}
+            name="message"
+            error={field.message === "" && !firstRender.current}
+            onChange={(e) => handleChange(e, "message")}
+            required
+            helperText={
+              field.message === "" && !firstRender.current
+                ? "This field is required."
+                : ""
+            }
+            minRows={3}
+          />
+          <InputField
+            fullWidth={true}
+            label="Name"
+            variant="outlined"
+            inputProps={{ className: classes.input }}
+            name="user_name"
+            error={field.name === "" && !firstRender.current}
+            onChange={(e) => handleChange(e, "name")}
+            required
+            helperText={
+              field.name === "" && !firstRender.current
+                ? "This field is required."
+                : ""
+            }
+          />
+          <InputField
+            fullWidth={true}
+            label="Email"
+            variant="outlined"
+            inputProps={{ className: classes.input }}
+            name="user_email"
+            error={
+              (field.email === "" || !validateEmail(field.email)) &&
+              !firstRender.current
+            }
+            onChange={(e) => handleChange(e, "email")}
+            required
+            helperText={
+              (field.email === "" || !validateEmail(field.email)) &&
+              !firstRender.current
+                ? "Please enter a correct email."
+                : ""
+            }
+          />
+          <Button
+            variant="outlined"
+            fullWidth={true}
+            endIcon={<Send />}
+            className={classes.button}
+            type="submit"
+            disabled={!isEnabled}
+          >
+            Contact Me
+          </Button>
+        </Box>
+        <ToastContainer
+          position="top-right"
+          autoClose={8000}
+          hideProgressBar={false}
+          newestOnTop={false}
+          closeOnClick
+          rtl={false}
+          pauseOnFocusLoss
+          draggable
+          pauseOnHover
+          theme="colored"
+        />
+      </Box>
     </Box>
   );
 };
