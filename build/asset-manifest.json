@@ -1,8 +1,11 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.889e1852.css",
-    "main.js": "/portfolio/static/js/main.53ccc99d.js",
+    "main.js": "/portfolio/static/js/main.f7111d1e.js",
     "static/media/worklete.png": "/portfolio/static/media/worklete.07cb2def7b3381f8e3ed.png",
+    "static/media/sparkrock.png": "/portfolio/static/media/sparkrock.af82e33ebf7381b9ff08.png",
+    "static/media/laurelroad.png": "/portfolio/static/media/laurelroad.29628a7e18d7cc8adced.png",
+    "static/media/omniscience.png": "/portfolio/static/media/omniscience.da91fcb1023c2aabe7a0.png",
     "static/media/rolfsonoil.png": "/portfolio/static/media/rolfsonoil.0753ede91ba9a2940129.png",
     "static/media/www.assured.claims.png": "/portfolio/static/media/www.assured.claims.3396877b510b02550eea.png",
     "static/media/www.loungebuddy.com.png": "/portfolio/static/media/www.loungebuddy.com.4af6010dd0ec1a39e1bd.png",
@@ -13,6 +16,7 @@
     "static/media/campusoptics.png": "/portfolio/static/media/campusoptics.b43f2b3cc03f9d75b36f.png",
     "static/media/pleroma.social.png": "/portfolio/static/media/pleroma.social.8b94496d508987af3753.png",
     "static/media/www.ravetree.com.png": "/portfolio/static/media/www.ravetree.com.5c154881d2b12a6d3cea.png",
+    "static/media/intellimize.png": "/portfolio/static/media/intellimize.fa277e3a055cacf3e311.png",
     "static/media/qxtro-python-staging.herokuapp.com.png": "/portfolio/static/media/qxtro-python-staging.herokuapp.com.e7604ea755493de33507.png",
     "static/media/www.archetape.com.jpg": "/portfolio/static/media/www.archetape.com.8f20647a122a45b76169.jpg",
     "static/media/Johann_Villalvir.pdf": "/portfolio/static/media/Johann_Villalvir.aeb6649d101b0880b51e.pdf",
@@ -25,10 +29,10 @@
     "static/media/webflow.png": "/portfolio/static/media/webflow.80a6e5207a9c2c347ba1.png",
     "index.html": "/portfolio/index.html",
     "main.889e1852.css.map": "/portfolio/static/css/main.889e1852.css.map",
-    "main.53ccc99d.js.map": "/portfolio/static/js/main.53ccc99d.js.map"
+    "main.f7111d1e.js.map": "/portfolio/static/js/main.f7111d1e.js.map"
   },
   "entrypoints": [
     "static/css/main.889e1852.css",
-    "static/js/main.53ccc99d.js"
+    "static/js/main.f7111d1e.js"
   ]
 }

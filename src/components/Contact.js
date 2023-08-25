@@ -54,6 +54,8 @@ const useStyles = makeStyles((theme) => ({
     padding: theme.spacing(1),
     "&:disabled": {
       borderColor: "#e0e0e0",
+      color: "#e0e0e0",
+      background: "darkgray",
     },
   },
   field: {
@@ -75,7 +77,7 @@ const InputField = withStyles({
         borderColor: "#e0e0e0",
       },
       "&:hover fieldset": {
-        // borderColor: "#e0e0e0",
+        borderColor: "#e0e0e0",
         borderWidth: 2,
       },
       "&.Mui-focused fieldset": {
