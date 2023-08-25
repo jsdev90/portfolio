@@ -18,6 +18,7 @@ import webflowIcon from "./images/webflow.png";
 import angularToReact from "./images/xangular_react_icon.png";
 import vue from "./images/vue.jpeg";
 import web from "./images/web.png"
+import angular from "./images/angular.png"
 
 export const skills = [
   {type: "JavaScript", level: 98},
@@ -47,6 +48,14 @@ export const skills = [
 ];
 
 export const works = [
+  {
+    title: 'Frontend Engineer',
+    subTitle: 'Sparkrock',
+    date: 'Mar  2023 - Aug 2023',
+    content: 'Angular10, TypeScript, Bootstrap, LESS, Microsoft 365, Azure, .NET Core API',
+    icon: angular,
+    alt: 'angular',
+  },
   {
     title: 'Senior Frontend Developer',
     subTitle: 'Laurel Road',
