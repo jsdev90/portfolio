@@ -12,7 +12,7 @@ import CloudDownload from "@material-ui/icons/CloudDownload";
 import PlayArrow from "@material-ui/icons/PlayArrow";
 import IconButton from "@material-ui/core/IconButton";
 
-import resume from "../Resume.pdf";
+import resume from "../Johann_Villalvir.pdf";
 import { works } from '../constants';
 
 const useStyles = makeStyles((theme) => ({
