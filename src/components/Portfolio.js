@@ -93,7 +93,6 @@ const Portfolio = () => {
       <Grid container>
         {projects.map((project, i) => (
           <Grid item xs={12} sm={6} md={3} key={i} className={classes.gridItem}>
-            {/* <Zoom duration={i * 300}> */}
             <Card className={classes.cardContainer} onClick={() => handleOpenModal(i)}>
               <CardActionArea>
                 <CardMedia
@@ -117,7 +116,6 @@ const Portfolio = () => {
                 </a>
               </CardActions>
             </Card>
-            {/* </Zoom> */}
           </Grid>
         ))}
       </Grid>
