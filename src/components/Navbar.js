@@ -74,10 +74,10 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 const menuItems = [
-  { listIcon: <Home />, listText: "Home", listPath: "/portfolio" },
+  { listIcon: <Home />, listText: "Home", listPath: "/" },
   { listIcon: <VerifiedUser />, listText: "Skills", listPath: "/skills" },
   { listIcon: <AssignmentInd />, listText: "Resume", listPath: "/resume" },
-  { listIcon: <Apps />, listText: "Portfolio", listPath: "/projects" },
+  { listIcon: <Apps />, listText: "Portfolio", listPath: "/portfolio" },
   { listIcon: <ContactMail />, listText: "Contact", listPath: "/contact" },
 ];
 
@@ -115,16 +115,7 @@ const Navbar = () => {
       <Box component="nav">
         <AppBar position="static" className={classes.appBar}>
           <Toolbar className={classes.toolBar}>
-            <Avatar className={classes.avatar} src={jex} alt="Johann Villalvir" component={Link} to={"/portfolio"} />
-            {/* <Box className={classes.links}>
-              {links.map((link, idx) => {
-                return (
-                  <Link to={link.listPath} underline="none" key={`header-link-${idx}`} className={classes.link}>
-                    {link.listText}
-                  </Link>
-                )
-              })}
-            </Box> */}
+            <Avatar className={classes.avatar} src={jex} alt="Johann Villalvir" component={Link} to={"/"} />
             <IconButton onClick={() => setOpen(true)}>
               <Menu className={classes.menu} />
             </IconButton>
