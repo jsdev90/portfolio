@@ -13,12 +13,25 @@ const useStyles = makeStyles((theme) => ({
     width: 250,
     height: 250,
     margin: theme.spacing(1),
+    [theme.breakpoints.down('md')]: {
+      '& > img': {
+        width: 150,
+        height: 150,
+        borderRadius: '100%',
+      }
+    }
   },
   title: {
     color: "#fafafa",
+    [theme.breakpoints.down('md')]: {
+      fontSize: '2.5rem',
+    }
   },
   subtitle: {
     color: "#e0e0e0",
+    [theme.breakpoints.down('md')]: {
+      fontSize: '1.2rem',
+    }
   },
   typedContainer: {
     position: "absolute",
@@ -36,13 +49,13 @@ const Header = () => {
 
   return (
     <Box className={classes.typedContainer}>
-      <Grid container justify="center">
-        <Avatar className={[classes.avatar, "userAvatar"]} src={avatar} alt="Johann Villalvir" />
+      <Grid container justifyContent="center">
+        <Avatar className={classes.avatar} src={avatar} alt="Johann Villalvir" />
       </Grid>
-      <Typography className={[classes.title, "userName"]} variant="h2">
+      <Typography className={classes.title} variant="h2">
         Johann Villalvir
       </Typography>
-      <Typography className={[classes.subtitle, "subTitle"]} variant="h4">
+      <Typography className={classes.subtitle} variant="h4">
         <Typewriter
           options={{
             strings: [
