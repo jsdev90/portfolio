@@ -299,7 +299,7 @@ export const projects = [
   {
     name: "Rolfson Oil",
     description: `- Built web and mobile front-end pages using the React, Redux, Redux-thunk, React Native CLI, HTML5, CSS3, and React-Material-UI.
-    - Developed React Native iOS/Android apps that helps drivers manage their tickets.
+    - Developed React Native iOS/Android apps that help drivers manage their tickets.
     - Enabled the mobile app to connect to Bluetooth printers to print tickets.
     - Fixed an iPad issue for the React-Printer plugin.
     - Created React components with React-Charts to support interactive visualizations of data projections and analysis.
