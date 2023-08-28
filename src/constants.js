@@ -204,8 +204,8 @@ export const projects = [
   {
     name: "CivImpact Labs",
     description: `- Built a single page application with React, Redux, TypeScript, HTML5, CSS3, SCSS, Opentok API, etc.
-    - Implemented pixel-perfect Figma Design and mobile-friendly UI.
-    - Worked on implementing the Video/Audio conference feature with OpenTok API and WebSocket API.
+    - Implemented pixel-perfect and mobile-friendly Figma Designs.
+    - Worked on implementing the Video/Audio conference features with OpenTok and WebSocket APIs.
     - Worked on integrating REST APIs with Axios and Redux-Thunk
     `,
     image: project1,
@@ -213,9 +213,9 @@ export const projects = [
   },
   {
     name: "ArcheTape",
-    description: `- Built responsive web front-end pages and implemented mobile-friendly and pixel-perfect designs with React.js, Redux, HTML5, CSS3, and styled-components.
+    description: `- Built responsive web front-end pages and implemented mobile-friendly and pixel-perfect figma designs with React.js, Redux, HTML5, CSS3, and styled-components.
     - Delivered a marketing website with React.js, HTML5, CSS3, and styled-components.
-    - Built a cross-platform mobile app for iOS and Android platforms with React Native CLI, React, Redux, Redux-Thunk, and Axios.
+    - Built cross-platform mobile apps for iOS and Android platforms with React Native CLI, React, Redux, Redux-Thunk, and Axios.
     - Integrated several third-party React and React Native packages such as Google Mapbox, DnD, and Stripe payment.
     - Implement messaging functionality with SendBird API and integrated FCM for push notification.
     `,
@@ -227,7 +227,7 @@ export const projects = [
     description: `- Built a Webflow website using Webflow CMS, Webflow UIKit, JavaScript, jQuery, HTML, CSS, etc.
     - Implemented mobile-friendly and pixel-perfect UI based on the Figma designs
     - Implemented UI animations
-    - Integrated Third-Party systems
+    - Integrated Third-Party systems like Maketo Form, Greenhouse, etc.
     `,
     image: project3,
     link: "https://www.assured.claims/",
@@ -245,7 +245,7 @@ export const projects = [
   {
     name: "Ravetree",
     description: `
-    - Implemented pixel-perfect design with Webflow CMS, Webflow UIKit, JavaScript, jQuery, HTML, CSS, etc.
+    - Implemented pixel-perfect Figma designs with Webflow CMS, Webflow UIKit, JavaScript, jQuery, HTML, CSS, etc.
     - Integrated Third-Party systems like Youtube API, Google Calendar, etc`,
     image: project5,
     link: "https://ravetree.com/",
@@ -273,8 +273,9 @@ export const projects = [
     description: `- Built responsive and mobile-friendly web front-end pages with React.js, Redux, HTML, CSS, SASS/SCSS, etc.
     - Worked on migrating Angular to React without a massive rewrite.
     - Integrated Backend API with Redux -Saga and Axios and 3rd party systems like Greenhouse, ZenDesk, Marketo Form, etc
-    - Built an iOS app with React Native, React, Redux -Thunk. Designed the entire mobile application to be able to function offline for long periods of time and sync data back once in cell reception (online)
-    - Integrated Unit Testing with Jest and Increased testing coverage of the existing application Cypress
+    - Built an iOS app with React Native, React, Redux-Thunk.
+    - Designed the entire mobile application to be able to function offline for long periods of time and sync data back once in cell reception (online).
+    - Integrated Unit Testing with Jest and Increased testing coverage of the existing application Cypress.
     `,
     image: project8,
     link: "https://www.loungebuddy.com/",
@@ -283,7 +284,7 @@ export const projects = [
     name: "Pleroma",
     description: `- Implemented front-end pages with Vue.js , Vuex , Vuetify , HTML5 , CSS3 , Bootstrap. Redesigned, simplified, and implemented a new version of an existing alerting application that contained over 100 form fields and drastically reduced the amount of customer support calls with the simplified redesign.
     - Developed a universal search feature for a customer-facing analytic application that allowed all of the application's data entities to be searched instantly within a single interface.
-    - Implemented various private APIs on a Node. js and MongoDB back end.
+    - Implemented various private APIs on a Node. js and MongoDB backend.
     `,
     image: project9,
     link: "https://pleroma.social/",
@@ -291,24 +292,25 @@ export const projects = [
   {
     name: "CampusOptics App",
     description: `- Built the React Native mobile app with React Native CLI, TypeScript, React Navigation, etc.
-    - Worked on integrating the Firebase Analytics, Google Map API, etc`,
+    - Worked on integrating the Firebase Analytics, Google Maps API, etc`,
     image: project10,
     link: "https://apps.apple.com/us/app/campusoptics/id1500448331",
   },
   {
     name: "Rolfson Oil",
     description: `- Built web and mobile front-end pages using the React, Redux, Redux-thunk, React Native CLI, HTML5, CSS3, and React-Material-UI.
-    - Developed a React Native iOS/Android app that helps drivers manage their tickets.
-    - Enabled the mobile app to connect to Bluetooth printers to print tickets. Fixed an iPad issue for the printer plugin.
-    - Created React components with React charts to support interactive visualizations of data projections and analysis.
-    - Refactored very large front-end application code to make it more modular and reusable.`,
+    - Developed React Native iOS/Android apps that helps drivers manage their tickets.
+    - Enabled the mobile app to connect to Bluetooth printers to print tickets.
+    - Fixed an iPad issue for the React-Printer plugin.
+    - Created React components with React-Charts to support interactive visualizations of data projections and analysis.
+    - Refactored a very huge front-end application code to make it more modular and reusable.`,
     image: project11,
     link: "https://ticketing.rolfsonoil.com/",
   },
   {
     name: "Worklete App",
     description: `- Implemented pixel-perfect designs with React Native UI library based on Eva Design System.
-    - Refactored the existing codebase based on best practices and focused on test-driven-development.
+    - Refactored the existing codebase based on the best practices and focused on test-driven-development.
     - Added Firebase back-end functions with Firebase administration.
     - Implemented push notifications for both iOS and Android platforms using FCM (Firebase Cloud Messaging).`,
     image: project12,
