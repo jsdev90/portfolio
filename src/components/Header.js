@@ -13,6 +13,7 @@ const useStyles = makeStyles((theme) => ({
     width: 250,
     height: 250,
     margin: theme.spacing(1),
+    border: '2px solid #fafafa',
     [theme.breakpoints.down('md')]: {
       '& > img': {
         width: 150,

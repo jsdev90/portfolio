@@ -6,7 +6,11 @@ body {
 }
 
 * {
-  font-family: 'Open Sans', sans-serif;
+  font-family: 'Josefin Sans', sans-serif !important;
+}
+
+.Typewriter__wrapper {
+  font-family: 'Courgette', cursive !important;
 }
 
 .home-background {

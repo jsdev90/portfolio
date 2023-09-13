@@ -35,11 +35,13 @@ const useStyles = makeStyles((theme) => ({
     textAlign: "center",
     textTransform: "uppercase",
     marginBottom: "1.5rem",
+    fontFamily: "'Courgette', cursive !important",
   },
   subHeading: {
     color: "#e0e0e0",
     paddingBottom: "1rem",
     textAlign: "center",
+    fontFamily: "'Courgette', cursive",
   },
   form: {
     marginTop: theme.spacing(2),

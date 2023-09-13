@@ -60,14 +60,12 @@ const Skills = () => {
           {skills.map((skill, i) => {
             return (
               <Grid item xs={6} sm={4} md={2} key={i} className={classes.gridItem}>
-                {/* <Zoom bottom duration={i * 300}> */}
                 <Card className={classes.cardContainer}>
                     <Typography variant="h5" gutterBottom className={classes.cardText}>
                       {skill.type}
                     </Typography>
                     <CircleChart percent={skill.level} />
                 </Card>
-                {/* </Zoom> */}
               </Grid>
             )
           })}
