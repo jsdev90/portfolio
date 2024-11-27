@@ -64,7 +64,6 @@ const Header = () => {
               "Senior Software Engineer",
               "Full-Stack JavaScript Engineer",
               "Webflow Expert",
-              "Assistant Instructor",
             ],
             loop: true,
             autoStart: true,
